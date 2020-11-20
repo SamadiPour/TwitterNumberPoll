@@ -4,6 +4,7 @@ import re
 from config import keywords, votes
 
 if __name__ == '__main__':
+    
     file = open('replies.jsonl')
     next(file)
 
@@ -13,6 +14,7 @@ if __name__ == '__main__':
 
         # ---- pre-process ----
         # remove usernames
+
         text = re.sub(r'(^|[^@\w])@(\w{1,15})\b', '', text).strip()
 
         # remove links
